@@ -7,6 +7,6 @@
   * 抽屉 view 添加在 keyWindow 下
   
   `[[UIApplication sharedApplication].keyWindow addSubview:self.cebian];`
-  * 移动 view 时移动的时导航栏下的 view
+  * 移动 view 时移动的是导航栏下的 view
   
   `self.navigationController.view.frame = [self frameWithOffsetX:offsetX];`
