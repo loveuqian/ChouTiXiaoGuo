@@ -29,7 +29,6 @@
     [self.view addGestureRecognizer:pan];
 
     SlideViewController *slide = [[SlideViewController alloc] init];
-    //    [self addChildViewController:slide];
     self.slideVC = slide;
 
     slide.view.frame = CGRectMake(-150, 0, 150, [UIScreen mainScreen].bounds.size.height);
@@ -42,14 +41,14 @@
 {
     CGPoint transP = [pan translationInView:self.view];
     CGFloat offsetX = transP.x;
-    self.navigationController.view.frame = [self frameWithOffsetX:offsetX];
+    self.tabBarController.view.frame = [self frameWithOffsetX:offsetX];
     self.slide.frame = [self frameWithOffsetX2:offsetX];
     [pan setTranslation:CGPointZero inView:self.view];
 }
 
 - (CGRect)frameWithOffsetX:(CGFloat)offsetX
 {
-    CGRect frame = self.navigationController.view.frame;
+    CGRect frame = self.tabBarController.view.frame;
     CGFloat x = frame.origin.x + offsetX;
     frame.origin.x = x;
     if (frame.origin.x > 150) {
@@ -81,11 +80,11 @@
                      animations:^{
                          if (self.slide.x == 0) {
                              self.slide.x = -150;
-                             self.navigationController.view.x = 0;
+                             self.tabBarController.view.x = 0;
                          }
                          else {
                              self.slide.x = 0;
-                             self.navigationController.view.x = 150;
+                             self.tabBarController.view.x = 150;
                          }
                      }];
 }
