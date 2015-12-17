@@ -30,8 +30,4 @@
 
 	```
 	self.tabBarController.view.frame = [self frameWithOffsetX:offsetX];
-<<<<<<< HEAD
 	```
-=======
-	```
->>>>>>> c235fd09a0a7eb8f52284e20f1e8e2e70202af5b
