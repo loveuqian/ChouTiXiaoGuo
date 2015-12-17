@@ -6,10 +6,8 @@
 //  Copyright © 2015年 WangShengFeng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ChouTiXiaoGuoViewController.h"
 
-@interface ViewController : UIViewController
-
+@interface ViewController : ChouTiXiaoGuoViewController
 
 @end
-

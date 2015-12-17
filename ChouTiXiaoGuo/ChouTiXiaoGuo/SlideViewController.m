@@ -10,6 +10,13 @@
 
 @implementation SlideViewController
 
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.tableView.backgroundColor = [UIColor orangeColor];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 20;
@@ -26,6 +33,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
     NSLog(@"%@", indexPath);
 }
 
