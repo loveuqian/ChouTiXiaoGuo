@@ -1,12 +1,33 @@
 # ChouTiXiaoGuo
-抽屉效果
+抽屉效果，代码写的烂，主要是讲方法，看完后能自己写一个才是真的有用
 
-* 抽屉效果有很多种，这个是跟 知乎日报 类似的
-* 之前一直做不出来，下午查了一下弄好了
-* 有两个关键点
-  * 抽屉 view 添加在 keyWindow 下
-  
-  `[[UIApplication sharedApplication].keyWindow addSubview:slide.view];`
-  * 移动 view 时移动的是导航栏下的 view
-  
-  `self.navigationController.view.frame = [self frameWithOffsetX:offsetX];`
+* 继承父类 
+
+	```
+	ChouTiXiaoGuoViewController
+	```
+
+* 设置抽屉 view 宽度 
+
+	```
+	#define choutiWidth 150	
+	```
+
+
+* 抽屉 view 添加为 keyWindow 子控件
+
+	```
+	[[UIApplication sharedApplication].keyWindow addSubview:slide.view];
+	```
+	
+* 如果有 navigationController 
+
+	```
+	self.navigationController.view.frame = [self frameWithOffsetX:offsetX];
+	```
+	
+* 如果有 tabBarController
+
+	```
+	self.tabBarController.view.frame = [self frameWithOffsetX:offsetX];
+	```
